@@ -14,6 +14,10 @@
 
 <title>Dardik Brothers Contracting | Alice Springs NT</title>
 
+<script>
+document.documentElement.classList.add("js");
+</script>
+
 <style>
 
 /* =========================================================
@@ -1701,7 +1705,7 @@ footer{
 
 
 /* =========================================================
-   FLOATING CALL BUTTON
+   MOBILE ACTIONS
 ========================================================= */
 
 .mobile-actions{
@@ -1710,10 +1714,24 @@ footer{
 
 
 /* =========================================================
-   REVEAL ANIMATIONS
+   FAIL-SAFE REVEAL ANIMATIONS
 ========================================================= */
 
+/*
+   IMPORTANT:
+   Everything is visible by default.
+
+   Animations only activate after JavaScript successfully
+   initialises them. If JavaScript fails, the site remains
+   fully visible instead of becoming a black screen.
+*/
+
 .reveal{
+  opacity:1;
+  transform:none;
+}
+
+html.animations-ready .reveal{
 
   opacity:0;
 
@@ -1726,7 +1744,7 @@ footer{
 
 }
 
-.reveal.visible{
+html.animations-ready .reveal.visible{
 
   opacity:1;
 
@@ -1856,9 +1874,1916 @@ footer{
 
   }
 
-  .hero-stat:nth-ch
-  
-  </script>
+  .hero-stat:nth-child(2){
+    border-right:none;
+  }
+
+  .hero-stat:nth-child(3),
+  .hero-stat:nth-child(4){
+
+    border-top:
+      1px solid rgba(255,255,255,.11);
+
+  }
+
+  .intro-grid,
+  .contact-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .services-heading,
+  .projects-heading{
+
+    align-items:start;
+
+    flex-direction:column;
+
+  }
+
+  .services-heading p{
+
+    width:auto;
+
+    max-width:600px;
+
+  }
+
+  .process-grid{
+
+    grid-template-columns:
+      1fr 1fr;
+
+  }
+
+  .process-item:nth-child(2){
+    border-right:none;
+  }
+
+  .process-item:nth-child(3),
+  .process-item:nth-child(4){
+
+    border-top:
+      1px solid var(--line);
+
+  }
+
+}
+
+
+@media(max-width:700px){
+
+  .container{
+
+    width:min(
+      calc(100% - 30px),
+      var(--container)
+    );
+
+  }
+
+  .section{
+    padding:85px 0;
+  }
+
+  .top-strip-inner{
+    justify-content:center;
+  }
+
+  .top-strip-right{
+    display:none;
+  }
+
+  .nav{
+    min-height:72px;
+  }
+
+  .nav-links{
+
+    top:106px;
+
+    height:
+      calc(100vh - 106px);
+
+  }
+
+  .brand-mark{
+
+    width:41px;
+    height:41px;
+
+  }
+
+  .brand-text strong{
+    font-size:12px;
+  }
+
+  .brand-text small{
+    font-size:7px;
+  }
+
+  .hero{
+
+    min-height:770px;
+
+  }
+
+  .hero-content{
+
+    padding:
+      90px 0 210px;
+
+  }
+
+  .hero h1{
+
+    font-size:
+      clamp(58px,18vw,85px);
+
+  }
+
+  .hero-description{
+
+    font-size:15px;
+
+  }
+
+  .hero-buttons{
+
+    flex-direction:column;
+
+  }
+
+  .hero-buttons .btn{
+    width:100%;
+  }
+
+  .hero-stat{
+
+    min-height:70px;
+
+    padding:13px 15px;
+
+  }
+
+  .hero-stat strong{
+    font-size:11px;
+  }
+
+  .hero-stat span{
+    font-size:7px;
+  }
+
+  h2{
+
+    font-size:
+      clamp(43px,13vw,62px);
+
+  }
+
+  .intro-points{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .services-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .service-card{
+    min-height:450px;
+  }
+
+  .service-content{
+    padding:27px;
+  }
+
+  .territory{
+
+    min-height:720px;
+
+    background:
+
+      linear-gradient(
+        0deg,
+        rgba(7,7,6,.98),
+        rgba(7,7,6,.68)
+      ),
+
+      url("https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?auto=format&fit=crop&w=1400&q=88")
+      center/cover;
+
+  }
+
+  .capability-list{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .projects-grid{
+
+    display:flex;
+
+    flex-direction:column;
+
+  }
+
+  .project{
+
+    height:360px;
+
+  }
+
+  .project:first-child{
+
+    height:470px;
+
+  }
+
+  .process-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .process-item,
+  .process-item:first-child{
+
+    border-left:
+      1px solid var(--line);
+
+    border-right:
+      1px solid var(--line);
+
+    border-top:
+      1px solid var(--line);
+
+  }
+
+  .process-item:first-child{
+    border-top:none;
+  }
+
+  .cta-strip-inner{
+
+    padding:48px 0;
+
+    min-height:auto;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .form-group.full{
+    grid-column:auto;
+  }
+
+  .quote-box{
+    padding:25px 20px;
+  }
+
+  .footer-top{
+
+    grid-template-columns:1fr;
+
+    gap:38px;
+
+  }
+
+  .footer-bottom{
+
+    flex-direction:column;
+
+  }
+
+  .mobile-actions{
+
+    position:fixed;
+
+    z-index:999;
+
+    left:10px;
+    right:10px;
+    bottom:10px;
+
+    padding:7px;
+
+    display:grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:7px;
+
+    background:
+      rgba(10,10,9,.91);
+
+    border:
+      1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+      0 15px 40px rgba(0,0,0,.5);
+
+  }
+
+  .mobile-actions a{
+
+    min-height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:9px;
+
+    font-weight:950;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+  }
+
+  .mobile-call{
+    background:#242421;
+  }
+
+  .mobile-quote{
+    background:var(--orange);
+  }
+
+  body{
+    padding-bottom:70px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     TOP STRIP
+====================================================== -->
+
+<div class="top-strip">
+
+  <div class="container top-strip-inner">
+
+    <span>
+      Alice Springs · Central Australia
+    </span>
+
+    <div class="top-strip-right">
+
+      <span>
+        Earthworks · Demolition · Fencing · Towing
+      </span>
+
+      <span>
+        Call 0437 472 021
+      </span>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
+<header>
+
+  <div class="container nav">
+
+    <a href="#home" class="brand">
+
+      <div class="brand-mark">
+        <span>DB</span>
+      </div>
+
+      <div class="brand-text">
+
+        <strong>
+          Dardik Brothers
+        </strong>
+
+        <small>
+          Contracting Pty Ltd
+        </small>
+
+      </div>
+
+    </a>
+
+
+    <nav
+      class="nav-links"
+      id="navLinks"
+    >
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#projects">
+        Projects
+      </a>
+
+      <a href="#process">
+        How We Work
+      </a>
+
+      <a href="#quote">
+        Contact
+      </a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+      <a
+        class="nav-phone"
+        href="tel:0437472021"
+      >
+        0437 472 021
+      </a>
+
+      <a
+        href="#quote"
+        class="nav-quote"
+      >
+        Request a Quote →
+      </a>
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        type="button"
+      >
+        ☰
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<main id="home">
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="hero-kicker">
+
+        <span class="hero-kicker-line"></span>
+
+        Contracting · Alice Springs NT
+
+      </div>
+
+
+      <h1>
+
+        BUILT FOR
+
+        <span>
+          THE TERRITORY.
+        </span>
+
+      </h1>
+
+
+      <p class="hero-description">
+
+        Earthworks, demolition, fencing and towing
+        services for projects across Alice Springs
+        and Central Australia.
+
+      </p>
+
+
+      <div class="hero-buttons">
+
+        <a
+          href="#quote"
+          class="btn btn-orange"
+        >
+          Request a Quote
+          <span>→</span>
+        </a>
+
+        <a
+          href="tel:0437472021"
+          class="btn btn-outline"
+        >
+          Call 0437 472 021
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-bottom">
+
+    <div class="container hero-bottom-inner">
+
+      <div class="hero-stat">
+
+        <strong>
+          Earthworks
+        </strong>
+
+        <span>
+          Site & Ground Works
+        </span>
+
+      </div>
+
+
+      <div class="hero-stat">
+
+        <strong>
+          Demolition
+        </strong>
+
+        <span>
+          Clearing & Removal
+        </span>
+
+      </div>
+
+
+      <div class="hero-stat">
+
+        <strong>
+          Fencing
+        </strong>
+
+        <span>
+          Property Solutions
+        </span>
+
+      </div>
+
+
+      <div class="hero-stat">
+
+        <strong>
+          Towing
+        </strong>
+
+        <span>
+          Alice Springs
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     INTRO
+====================================================== -->
+
+<section
+  class="section intro"
+  id="about"
+>
+
+  <div class="container intro-grid">
+
+    <div class="reveal">
+
+      <div class="section-label">
+        Dardik Brothers Contracting
+      </div>
+
+      <h2>
+        READY FOR
+        <span>THE JOB.</span>
+      </h2>
+
+    </div>
+
+
+    <div class="intro-copy reveal">
+
+      <p class="lead">
+
+        Based in Alice Springs, Dardik Brothers
+        Contracting provides practical contracting
+        services for residential, commercial and
+        property projects throughout Central Australia.
+
+      </p>
+
+
+      <div class="intro-points">
+
+        <div class="intro-point">
+
+          <strong>
+            Alice Springs Based
+          </strong>
+
+          <span>
+            Servicing local and surrounding areas.
+          </span>
+
+        </div>
+
+
+        <div class="intro-point">
+
+          <strong>
+            Multiple Services
+          </strong>
+
+          <span>
+            One point of contact across key contracting needs.
+          </span>
+
+        </div>
+
+
+        <div class="intro-point">
+
+          <strong>
+            Practical Solutions
+          </strong>
+
+          <span>
+            Straightforward service built around the job.
+          </span>
+
+        </div>
+
+
+        <div class="intro-point">
+
+          <strong>
+            Get a Quote
+          </strong>
+
+          <span>
+            Tell us what you need and we'll discuss the project.
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     SERVICES
+====================================================== -->
+
+<section
+  class="section section-dark"
+  id="services"
+>
+
+  <div class="container">
+
+
+    <div class="services-heading reveal">
+
+      <div>
+
+        <div class="section-label">
+          What We Do
+        </div>
+
+        <h2>
+          SERVICES THAT
+          <span>GET IT DONE.</span>
+        </h2>
+
+      </div>
+
+
+      <p>
+
+        From preparing the ground through to fencing,
+        demolition and towing, Dardik Brothers Contracting
+        provides services built for the demands of
+        Central Australia.
+
+      </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+      <article class="service-card reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1580901368919-7738efb0f87e?auto=format&fit=crop&w=1400&q=88"
+          alt="Earthmoving machinery working on a construction site"
+          loading="lazy"
+        >
+
+        <span class="service-number">
+          01
+        </span>
+
+        <div class="service-content">
+
+          <div class="service-icon"></div>
+
+          <h3>
+            Earthworks
+          </h3>
+
+          <p>
+
+            Earthmoving and ground preparation solutions
+            for property, construction and site projects
+            across the Alice Springs region.
+
+          </p>
+
+          <a
+            href="#quote"
+            class="service-link"
+          >
+            Discuss Your Project →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="service-card reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=88"
+          alt="Heavy machinery at an industrial work site"
+          loading="lazy"
+        >
+
+        <span class="service-number">
+          02
+        </span>
+
+        <div class="service-content">
+
+          <div class="service-icon"></div>
+
+          <h3>
+            Demolition
+          </h3>
+
+          <p>
+
+            Demolition and site-clearing services
+            designed to help prepare properties and
+            work sites for whatever comes next.
+
+          </p>
+
+          <a
+            href="#quote"
+            class="service-link"
+          >
+            Request a Quote →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="service-card reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5e?auto=format&fit=crop&w=1400&q=88"
+          alt="Contracting and construction work"
+          loading="lazy"
+        >
+
+        <span class="service-number">
+          03
+        </span>
+
+        <div class="service-content">
+
+          <div class="service-icon"></div>
+
+          <h3>
+            Fencing
+          </h3>
+
+          <p>
+
+            Practical fencing solutions for properties,
+            work sites and projects throughout Alice
+            Springs and surrounding areas.
+
+          </p>
+
+          <a
+            href="#quote"
+            class="service-link"
+          >
+            Get a Fencing Quote →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="service-card reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?auto=format&fit=crop&w=1400&q=88"
+          alt="Heavy vehicle on an Australian road"
+          loading="lazy"
+        >
+
+        <span class="service-number">
+          04
+        </span>
+
+        <div class="service-content">
+
+          <div class="service-icon"></div>
+
+          <h3>
+            Towing
+          </h3>
+
+          <p>
+
+            Towing services available in the Alice
+            Springs region when you need practical,
+            straightforward assistance.
+
+          </p>
+
+          <a
+            href="tel:0437472021"
+            class="service-link"
+          >
+            Call About Towing →
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     TERRITORY / CAPABILITY
+====================================================== -->
+
+<section class="section territory">
+
+  <div class="container">
+
+    <div class="territory-content reveal">
+
+      <div class="section-label">
+        Central Australia
+      </div>
+
+
+      <h2>
+
+        WORK BUILT FOR
+
+        <span>
+          TOUGH COUNTRY.
+        </span>
+
+      </h2>
+
+
+      <p class="lead">
+
+        Central Australian projects demand practical
+        thinking. Dardik Brothers Contracting brings
+        multiple contracting services together to help
+        get jobs moving.
+
+      </p>
+
+
+      <div class="capability-list">
+
+        <div class="capability">
+          <span>✓</span>
+          Earthworks
+        </div>
+
+        <div class="capability">
+          <span>✓</span>
+          Demolition
+        </div>
+
+        <div class="capability">
+          <span>✓</span>
+          Fencing
+        </div>
+
+        <div class="capability">
+          <span>✓</span>
+          Towing
+        </div>
+
+        <div class="capability">
+          <span>✓</span>
+          Alice Springs Based
+        </div>
+
+        <div class="capability">
+          <span>✓</span>
+          Project Enquiries Welcome
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     PROJECT SHOWCASE
+====================================================== -->
+
+<section
+  class="section"
+  id="projects"
+>
+
+  <div class="container">
+
+
+    <div class="projects-heading reveal">
+
+      <div>
+
+        <div class="section-label">
+          On The Job
+        </div>
+
+        <h2>
+
+          BUILT TO
+
+          <span>
+            WORK.
+          </span>
+
+        </h2>
+
+      </div>
+
+
+      <p>
+
+        A strong contracting business deserves a strong
+        showcase. This section can feature Dardik Brothers'
+        real machinery, projects and completed work.
+
+      </p>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+
+      <article class="project reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?auto=format&fit=crop&w=1500&q=88"
+          alt="Heavy construction machinery"
+          loading="lazy"
+        >
+
+        <div class="project-info">
+
+          <small>
+            Earthworks
+          </small>
+
+          <h3>
+            Site Preparation
+          </h3>
+
+        </div>
+
+      </article>
+
+
+      <article class="project reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=88"
+          alt="Construction site"
+          loading="lazy"
+        >
+
+        <div class="project-info">
+
+          <small>
+            Contracting
+          </small>
+
+          <h3>
+            Project Work
+          </h3>
+
+        </div>
+
+      </article>
+
+
+      <article class="project reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1485083269755-a7b559a4fe5e?auto=format&fit=crop&w=1000&q=88"
+          alt="Central Australian landscape"
+          loading="lazy"
+        >
+
+        <div class="project-info">
+
+          <small>
+            Central Australia
+          </small>
+
+          <h3>
+            Territory Based
+          </h3>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     PROCESS
+====================================================== -->
+
+<section
+  class="section section-dark"
+  id="process"
+>
+
+  <div class="container">
+
+
+    <div class="reveal">
+
+      <div class="section-label">
+        Straightforward From The Start
+      </div>
+
+      <h2>
+
+        YOUR JOB.
+
+        <span>
+          FOUR STEPS.
+        </span>
+
+      </h2>
+
+    </div>
+
+
+    <div class="process-grid">
+
+
+      <div class="process-item reveal">
+
+        <div class="process-number">
+          01
+        </div>
+
+        <h3>
+          Get In Touch
+        </h3>
+
+        <p>
+
+          Call or send through an enquiry and tell us
+          what you need done.
+
+        </p>
+
+      </div>
+
+
+      <div class="process-item reveal">
+
+        <div class="process-number">
+          02
+        </div>
+
+        <h3>
+          Discuss The Job
+        </h3>
+
+        <p>
+
+          We'll talk through the work, location and
+          project requirements.
+
+        </p>
+
+      </div>
+
+
+      <div class="process-item reveal">
+
+        <div class="process-number">
+          03
+        </div>
+
+        <h3>
+          Get Your Quote
+        </h3>
+
+        <p>
+
+          Once the scope is clear, the job can be
+          quoted appropriately.
+
+        </p>
+
+      </div>
+
+
+      <div class="process-item reveal">
+
+        <div class="process-number">
+          04
+        </div>
+
+        <h3>
+          Get It Moving
+        </h3>
+
+        <p>
+
+          With everything agreed, it's time to get
+          the project underway.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     BIG CTA
+====================================================== -->
+
+<section class="cta-strip">
+
+  <div class="container cta-strip-inner">
+
+    <h2>
+      GOT A JOB IN MIND?
+      LET'S TALK.
+    </h2>
+
+    <a
+      href="#quote"
+      class="btn"
+    >
+      Request a Quote →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTACT
+====================================================== -->
+
+<section
+  class="section"
+  id="quote"
+>
+
+  <div class="container contact-grid">
+
+
+    <div class="contact-copy reveal">
+
+      <div class="section-label">
+        Start A Conversation
+      </div>
+
+      <h2>
+
+        TELL US
+
+        <span>
+          ABOUT THE JOB.
+        </span>
+
+      </h2>
+
+
+      <p class="lead">
+
+        Need earthworks, demolition, fencing or towing?
+        Send through the details below or give Dardik
+        Brothers Contracting a call.
+
+      </p>
+
+
+      <div class="contact-details">
+
+
+        <div class="contact-detail">
+
+          <small>
+            Phone
+          </small>
+
+          <strong>
+
+            <a href="tel:0437472021">
+              0437 472 021
+            </a>
+
+          </strong>
+
+        </div>
+
+
+        <div class="contact-detail">
+
+          <small>
+            Location
+          </small>
+
+          <strong>
+            267 Stuart Highway, Stuart NT 0870
+          </strong>
+
+        </div>
+
+
+        <div class="contact-detail">
+
+          <small>
+            Service Region
+          </small>
+
+          <strong>
+            Alice Springs & Central Australia
+          </strong>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="quote-box reveal">
+
+      <h3>
+        REQUEST A QUOTE
+      </h3>
+
+      <p>
+        Tell us a little about the work you're looking to get done.
+      </p>
+
+
+      <form id="quoteForm">
+
+        <div class="form-grid">
+
+
+          <div class="form-group">
+
+            <label for="name">
+              Your Name
+            </label>
+
+            <input
+              id="name"
+              type="text"
+              placeholder="Name"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="phone">
+              Phone
+            </label>
+
+            <input
+              id="phone"
+              type="tel"
+              placeholder="Phone number"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="service">
+              Service
+            </label>
+
+            <select
+              id="service"
+              required
+            >
+
+              <option value="">
+                Select a service
+              </option>
+
+              <option>
+                Earthworks
+              </option>
+
+              <option>
+                Demolition
+              </option>
+
+              <option>
+                Fencing
+              </option>
+
+              <option>
+                Towing
+              </option>
+
+              <option>
+                Other / Multiple Services
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="location">
+              Job Location
+            </label>
+
+            <input
+              id="location"
+              type="text"
+              placeholder="Alice Springs / surrounding area"
+            >
+
+          </div>
+
+
+          <div class="form-group full">
+
+            <label for="details">
+              Job Details
+            </label>
+
+            <textarea
+              id="details"
+              placeholder="Tell us what you need done..."
+              required
+            ></textarea>
+
+          </div>
+
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="btn btn-orange form-submit"
+        >
+          Send Quote Request →
+        </button>
+
+
+      </form>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+  <div class="container">
+
+
+    <div class="footer-top">
+
+
+      <div class="footer-brand">
+
+        <a
+          href="#home"
+          class="brand"
+        >
+
+          <div class="brand-mark">
+            <span>DB</span>
+          </div>
+
+          <div class="brand-text">
+
+            <strong>
+              Dardik Brothers
+            </strong>
+
+            <small>
+              Contracting Pty Ltd
+            </small>
+
+          </div>
+
+        </a>
+
+
+        <p>
+
+          Earthworks, demolition, fencing and towing
+          services in Alice Springs and Central Australia.
+
+        </p>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>
+          SERVICES
+        </h4>
+
+        <a href="#services">
+          Earthworks
+        </a>
+
+        <a href="#services">
+          Demolition
+        </a>
+
+        <a href="#services">
+          Fencing
+        </a>
+
+        <a href="#services">
+          Towing
+        </a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>
+          CONTACT
+        </h4>
+
+        <a href="tel:0437472021">
+          0437 472 021
+        </a>
+
+        <a href="#quote">
+          Request a Quote
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#projects">
+          Projects
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+
+        © <span id="year"></span>
+        Dardik Brothers Contracting Pty Ltd
+
+      </span>
+
+      <span>
+        Alice Springs · Northern Territory
+      </span>
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+<!-- ======================================================
+     MOBILE ACTION BAR
+====================================================== -->
+
+<div class="mobile-actions">
+
+  <a
+    href="tel:0437472021"
+    class="mobile-call"
+  >
+    ☎ Call Now
+  </a>
+
+  <a
+    href="#quote"
+    class="mobile-quote"
+  >
+    Get a Quote →
+  </a>
+
+</div>
+
+
+<!-- ======================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const menuBtn =
+    document.getElementById("menuBtn");
+
+  const navLinks =
+    document.getElementById("navLinks");
+
+  const quoteForm =
+    document.getElementById("quoteForm");
+
+  const year =
+    document.getElementById("year");
+
+
+  /* =======================================================
+     CURRENT YEAR
+  ======================================================= */
+
+  if(year){
+
+    year.textContent =
+      new Date().getFullYear();
+
+  }
+
+
+  /* =======================================================
+     MOBILE MENU
+  ======================================================= */
+
+  if(menuBtn && navLinks){
+
+    menuBtn.addEventListener(
+      "click",
+      function(){
+
+        const open =
+          navLinks.classList.toggle("open");
+
+        document.body.classList.toggle(
+          "menu-open",
+          open
+        );
+
+        menuBtn.textContent =
+          open ? "✕" : "☰";
+
+        menuBtn.setAttribute(
+          "aria-expanded",
+          open ? "true" : "false"
+        );
+
+      }
+    );
+
+
+    navLinks
+      .querySelectorAll("a")
+      .forEach(function(link){
+
+        link.addEventListener(
+          "click",
+          function(){
+
+            navLinks
+              .classList
+              .remove("open");
+
+            document.body
+              .classList
+              .remove("menu-open");
+
+            menuBtn.textContent =
+              "☰";
+
+            menuBtn.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          }
+        );
+
+      });
+
+  }
+
+
+  /* =======================================================
+     FAIL-SAFE REVEAL ANIMATIONS
+  ======================================================= */
+
+  const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+  if(
+    "IntersectionObserver" in window &&
+    revealElements.length > 0
+  ){
+
+    try{
+
+      document.documentElement
+        .classList
+        .add("animations-ready");
+
+
+      const observer =
+        new IntersectionObserver(
+
+          function(entries){
+
+            entries.forEach(
+              function(entry){
+
+                if(entry.isIntersecting){
+
+                  entry.target
+                    .classList
+                    .add("visible");
+
+                  observer
+                    .unobserve(entry.target);
+
+                }
+
+              }
+            );
+
+          },
+
+          {
+            threshold:0.08,
+            rootMargin:"0px 0px -20px 0px"
+          }
+
+        );
+
+
+      revealElements.forEach(
+        function(element){
+
+          observer.observe(element);
+
+        }
+      );
+
+
+      /*
+        FINAL SAFETY NET:
+        Nothing is allowed to remain hidden.
+      */
+
+      window.setTimeout(
+        function(){
+
+          revealElements.forEach(
+            function(element){
+
+              element
+                .classList
+                .add("visible");
+
+            }
+          );
+
+        },
+        2500
+      );
+
+
+    }catch(error){
+
+      document.documentElement
+        .classList
+        .remove("animations-ready");
+
+    }
+
+  }
+
+
+  /* =======================================================
+     QUOTE FORM
+  ======================================================= */
+
+  if(quoteForm){
+
+    quoteForm.addEventListener(
+      "submit",
+      function(event){
+
+        event.preventDefault();
+
+
+        const name =
+          document
+            .getElementById("name")
+            .value
+            .trim();
+
+
+        const phone =
+          document
+            .getElementById("phone")
+            .value
+            .trim();
+
+
+        const service =
+          document
+            .getElementById("service")
+            .value;
+
+
+        const location =
+          document
+            .getElementById("location")
+            .value
+            .trim();
+
+
+        const details =
+          document
+            .getElementById("details")
+            .value
+            .trim();
+
+
+        const message =
+`Hi Dardik Brothers Contracting,
+
+I'd like to request a quote.
+
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Job location: ${location || "Not specified"}
+
+Job details:
+${details}`;
+
+
+        const smsURL =
+          "sms:0437472021?body=" +
+          encodeURIComponent(message);
+
+
+        window.location.href =
+          smsURL;
+
+      }
+    );
+
+  }
+
+});
+
+</script>
+
 
 </body>
 </html>
